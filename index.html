@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автостопом по шизофрении</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Автостопом по шизофрении</h1>
+            <div class="header-controls">
+                <button id="save-btn" class="control-btn" onclick="saveGame()" title="Сохранить">💾</button>
+                <button id="load-btn" class="control-btn" onclick="loadGame()" title="Загрузить">📁</button>
+                <button id="menu-btn" class="control-btn" onclick="toggleMenu()" title="Меню">☰</button>
+            </div>
+        </div>
+        
+        <div id="menu-panel" class="menu-panel hidden">
+            <h3>Меню</h3>
+            <div class="menu-section">
+                <h4>Достижения</h4>
+                <div id="achievements-list" class="achievements-list"></div>
+            </div>
+            <div class="menu-section">
+                <h4>Статистика</h4>
+                <div class="menu-stats">
+                    <p>Глав пройдено: <span id="chapters-completed">0</span></p>
+                    <p>Выборов сделано: <span id="choices-made">0</span></p>
+                    <p>Время игры: <span id="play-time">00:00:00</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="game-screen">
+            <div id="text-container">
+                <div id="chapter-title"></div>
+                <div id="story-text"></div>
+            </div>
+            <div id="choices-container"></div>
+            <div id="stats-container">
+                <div class="stat">
+                    <span class="stat-label">Ясность:</span>
+                    <div class="stat-bar">
+                        <div id="clarity-bar" class="stat-fill"></div>
+                    </div>
+                    <span id="clarity-value">50</span>%
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Память:</span>
+                    <div class="stat-bar">
+                        <div id="memory-bar" class="stat-fill"></div>
+                    </div>
+                    <span id="memory-value">50</span>%
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Здоровье:</span>
+                    <div class="stat-bar">
+                        <div id="health-bar" class="stat-fill"></div>
+                    </div>
+                    <span id="health-value">50</span>%
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Философия:</span>
+                    <div class="stat-bar">
+                        <div id="philosophy-bar" class="stat-fill"></div>
+                    </div>
+                    <span id="philosophy-value">50</span>%
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Социальность:</span>
+                    <div class="stat-bar">
+                        <div id="sociality-bar" class="stat-fill"></div>
+                    </div>
+                    <span id="sociality-value">50</span>%
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="game-enhanced.js"></script>
+</body>
+</html>
