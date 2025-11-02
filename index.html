@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Автостопом по шизофрении</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>Автостопом по шизофрении</h1>
             <div class="header-controls">
+                <button id="sound-btn" class="control-btn" onclick="toggleSound()" title="Звук">🔊</button>
                 <button id="save-btn" class="control-btn" onclick="saveGame()" title="Сохранить">💾</button>
                 <button id="load-btn" class="control-btn" onclick="loadGame()" title="Загрузить">📁</button>
+                <button id="fullscreen-btn" class="control-btn" onclick="toggleFullscreen()" title="Полноэкранный режим">⛶</button>
                 <button id="menu-btn" class="control-btn" onclick="toggleMenu()" title="Меню">☰</button>
             </div>
         </div>
@@ -78,6 +81,14 @@
             </div>
         </div>
     </div>
+    <script type="module">
+        // Load environment variables
+        window.ENV = {
+            SUPABASE_URL: 'https://epxupxwpleuipndzlidv.supabase.co',
+            SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVweHVweHdwbGV1aXBuZHpsaWR2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjIwODg3OTQsImV4cCI6MjA3NzY2NDc5NH0.nESGe3cdm83ZsiJI5jX_RdUsCapIaf2ni8vx2olayac'
+        };
+    </script>
+    <script src="supabase-client.js"></script>
     <script src="game-enhanced.js"></script>
 </body>
 </html>
